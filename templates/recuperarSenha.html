@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Armazena Facil - Recuperação de Senha</title>
+  <link rel="stylesheet" href="/static/style.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+  <div class="form-container">
+    <h2>Recuperação de Senha</h2>
+    <form id="recoveryForm" onsubmit="return retrievePassword()">
+      <div>
+        <label for="login">Login</label>
+        <input type="text" id="login" name="login" placeholder="Digite seu login" required>
+        <div class="error" id="loginError"></div>
+      </div>
+
+      <div>
+        <input type="submit" value="Recuperar Senha">
+      </div>
+    </form>
+    <div>
+      <input type="button" value="Voltar" onclick="goBack()">
+    </div>
+
+    <!-- Exibir a senha recuperada -->
+    <div class="success" id="passwordResult"></div>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>
